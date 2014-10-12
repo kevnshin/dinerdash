@@ -55,12 +55,21 @@ module.exports = {
   },
 
 
+
   identity: function (value) {
 
     return value;
 
-  }
+  },
 
+
+  //skipped mixins
+
+  //no operation function --> do nothing
+  noop: function() {
+
+
+  },
 
 
 
