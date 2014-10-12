@@ -19,8 +19,40 @@ module.exports = {
 
   },
 
+  //Skipped createCallback
 
-   
+
+  //Escape: turns '&', '<', '>', ''', '"' into html elements
+  escape: function (string) {
+
+    switch (string) {
+
+      case "&":
+        return "&amp;";
+        break;
+
+      case "<":
+        return "&lt;";
+        break;
+
+      case ">":
+        return "&gt;";
+        break;
+
+      case "\"":
+        return "&quot;";
+        break;
+
+      case "\'":
+        return "&#39;";
+        break;
+
+      default:
+        return string;
+
+    }
+
+  },
 
 
 
