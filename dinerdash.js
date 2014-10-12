@@ -96,23 +96,22 @@ module.exports = {
         var numberbase_10 = Number(string);
         var backwards = '';
 
-
+        //the method to convert base 10 numbers to binary that was used is to keep
+        //dividing the num by 2. If remainder 1, add 1 to a string, if remainder 0, add 0
+        //then, take the backwards of that string
 
         while(numberbase_10>=1){
 
           //if dividing number by 2 has remainder 1
           if(numberbase_10%2 === 1){
             backwards += "1";
-            numberbase_10 -= 1;
-            numberbase_10 /= 2;
-
+            numberbase_10 -= 1; //subtract one to keep getting whole number remainders
+            numberbase_10 /= 2; //divide by 2
 
           } else { //dividing number by 2 is 0
             backwards += "0";
             numberbase_10 /= 2;
           }
-
-          
 
         }
 
@@ -134,22 +133,42 @@ module.exports = {
 
   },
 
-
+/* skipped property
   property: function(key) {
-
-
-
-
-
-
-
-
-
-
   },
+*/
+
+  random: function (min, max, floating) {
+  /*
+
+_.random(0, 5);
+// → an integer between 0 and 5
+
+_.random(5);
+// → also an integer between 0 and 5
+
+_.random(5, true);
+// → a floating-point number between 0 and 5
+
+_.random(1.2, 5.2);
+// → a floating-point number between 1.2 and 5.2
+
+  */
+
+  //if no value for floating
+  if(floating===null){
+    floating = false;
+  }
+
+  //if no value for min
+  if(min===null){
+    min = 0;
+  }
 
 
 
+
+  }
 
 
 
