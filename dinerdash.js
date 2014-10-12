@@ -55,6 +55,13 @@ module.exports = {
   },
 
 
+  identity: function (value) {
+
+    return value;
+
+  }
+
+
 
 
 
